@@ -9,9 +9,9 @@ from time import perf_counter as now
 
 from datetime import datetime
 
-from octoprint_MaintenanceManager.utils import StringUtils
-from octoprint_MaintenanceManager.utils.odometer import Odometer
-from octoprint_MaintenanceManager.utils.odometer import Vector3D
+from octoprint_MaintenanceManagerProPlus.utils import StringUtils
+from octoprint_MaintenanceManagerProPlus.utils.odometer import Odometer
+from octoprint_MaintenanceManagerProPlus.utils.odometer import Vector3D
 from octoprint.util import RepeatedTimer
 
 

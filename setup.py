@@ -4,14 +4,14 @@
 ### Do not forget to adjust the following variables to your own plugin.
 
 # The plugin's identifier, has to be unique
-plugin_identifier = "MaintenanceManager"
+plugin_identifier = "MaintenanceManagerProPlus"
 
 # The plugin's python package, should be "octoprint_<plugin identifier>", has to be unique
-plugin_package = "octoprint_MaintenanceManager"
+plugin_package = "octoprint_MaintenanceManagerProPlus"
 
 # The plugin's human readable name. Can be overwritten within OctoPrint's internal data via __plugin_name__ in the
 # plugin module
-plugin_name = "MaintenanceManager"
+plugin_name = "OctoPrint-MaintenanceManagerProPlus"
 
 # The plugin's version. Can be overwritten within OctoPrint's internal data via __plugin_version__ in the plugin module
 plugin_version = "1.0.0.dev1"
@@ -21,13 +21,13 @@ plugin_version = "1.0.0.dev1"
 plugin_description = """OctoPrint-Plugin that tracks print-time (total & on parts), axis-movements and has the ability to create "Maintenance Reports"."""
 
 # The plugin's author. Can be overwritten within OctoPrint's internal data via __plugin_author__ in the plugin module
-plugin_author = "OllisGit"
+plugin_author = "Ajimaru, based on work of OllisGit and viktak"
 
 # The plugin's author's mail address.
-plugin_author_email = "ollisgit@gmail.com"
+plugin_author_email = "ajimaru_gdr@pm.me"
 
 # The plugin's homepage URL. Can be overwritten within OctoPrint's internal data via __plugin_url__ in the plugin module
-plugin_url = "https://github.com/OllisGit/OctoPrint-MaintenanceManager"
+plugin_url = "https://github.com/Ajimaru/OctoPrint-MaintenanceManagerProPlus"
 
 # The plugin's license. Can be overwritten within OctoPrint's internal data via __plugin_license__ in the plugin module
 plugin_license = "AGPLv3"

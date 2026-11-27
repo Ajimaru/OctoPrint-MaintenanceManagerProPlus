@@ -1,7 +1,7 @@
-# OctoPrint-MaintenanceManager
-[![Version](https://img.shields.io/badge/dynamic/json.svg?color=brightgreen&label=version&url=https://api.github.com/repos/OllisGit/OctoPrint-MaintenanceManager/releases&query=$[0].name)]()
-[![Released](https://img.shields.io/badge/dynamic/json.svg?color=brightgreen&label=released&url=https://api.github.com/repos/OllisGit/OctoPrint-MaintenanceManager/releases&query=$[0].published_at)]()
-![GitHub Releases (by Release)](https://img.shields.io/github/downloads/OllisGit/OctoPrint-MaintenanceManager/latest/total.svg)
+# OctoPrint-MaintenanceManagerProPlus
+[![Version](https://img.shields.io/badge/dynamic/json.svg?color=brightgreen&label=version&url=https://api.github.com/repos/Ajimaru/OctoPrint-MaintenanceManagerProPlus/releases&query=$[0].name)]()
+[![Released](https://img.shields.io/badge/dynamic/json.svg?color=brightgreen&label=released&url=https://api.github.com/repos/Ajimaru/OctoPrint-MaintenanceManagerProPlus/releases&query=$[0].published_at)]()
+![GitHub Releases (by Release)](https://img.shields.io/github/downloads/Ajimaru/OctoPrint-MaintenanceManagerProPlus/latest/total.svg)
 
 
 OctoPrint-Plugin that tracks print-time (total & on parts), axis-movements and has the ability to create "Maintenance Reports".
@@ -10,10 +10,12 @@ It can also define "Maintenance Alerts", so that you never missed to tie up your
 
 # WORKIN PROGRESS, NO FINAL RELEASE, yet!!!! Only a DEV-release
 
-### Support my Efforts
+## Origin
 
-This plugin, as well as my [other plugins](https://github.com/OllisGit/) were developed in my spare time.
-If you like it, I would be thankful about a cup of coffee :)
+This plugin is a fork descending from:
+
+- [OllisGit/OctoPrint-MaintenanceManager](https://github.com/OllisGit/OctoPrint-MaintenanceManager) — original project
+- [viktak/OctoPrint-MaintenanceManager](https://github.com/viktak/OctoPrint-MaintenanceManager) — fork this repository is based on (MQTT support)
 
 ## Tested with:
 - OctoPrint 1.7.2:  with Python 3.7.3
@@ -36,17 +38,16 @@ If you like it, I would be thankful about a cup of coffee :)
 
 ## Setup
 
-NOT USED AT THE MOMENT:
-Install via the bundled [Plugin Manager](https://docs.octoprint.org/en/master/bundledplugins/pluginmanager.html)
-or manually using this URL:
+There is no release of this fork yet. Once there is, install it via the bundled
+[Plugin Manager](https://docs.octoprint.org/en/master/bundledplugins/pluginmanager.html) using this URL:
 
-ONLY FIRST DEV-RELEASE
-    https://github.com/OllisGit/OctoPrint-MaintenanceManager/releases/download/1.0.0.dev1/master.zip
+    https://github.com/Ajimaru/OctoPrint-MaintenanceManagerProPlus/releases/latest/download/master.zip
 
-NOT USED AT THE MOMENT:
-    https://github.com/OllisGit/OctoPrint-MaintenanceManager/releases/latest/download/master.zip
+The plugin identifier is now `MaintenanceManagerProPlus`. Uninstall the original MaintenanceManager first,
+otherwise both plugins track and publish in parallel. Counters and settings of the original plugin are not
+taken over.
 
 ## Versions
 
-see [Release-Overview](https://github.com/OllisGit/OctoPrint-MaintenanceManager/releases/)
+see [Release-Overview](https://github.com/Ajimaru/OctoPrint-MaintenanceManagerProPlus/releases/)
 

@@ -9,10 +9,10 @@ import flask
 from flask import jsonify, request, make_response, Response, send_file, abort
 import json
 
-from octoprint_MaintenanceManager.utils import StringUtils
+from octoprint_MaintenanceManagerProPlus.utils import StringUtils
 
 
-class MaintenanceManagerAPI(octoprint.plugin.BlueprintPlugin):
+class MaintenanceManagerProPlusAPI(octoprint.plugin.BlueprintPlugin):
 
     #######################################################################################   LOAD TRACKING INFORMATION
     @octoprint.plugin.BlueprintPlugin.route("/trackingInformation", methods=["GET"])

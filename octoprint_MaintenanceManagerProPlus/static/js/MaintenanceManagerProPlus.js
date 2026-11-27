@@ -1,20 +1,20 @@
 /*
- * View model for MaintenanceManager
+ * View model for MaintenanceManagerProPlus
  *
- * Author: OllisGit
+ * Author: Ajimaru, based on work of OllisGit
  * License: AGPLv3
  */
 $(function() {
-    function MaintenanceManagerViewModel(parameters) {
+    function MaintenanceManagerProPlusViewModel(parameters) {
 
-        var PLUGIN_ID = "MaintenanceManager"; // from setup.py plugin_identifier
+        var PLUGIN_ID = "MaintenanceManagerProPlus"; // from setup.py plugin_identifier
         var self = this;
 
         // assign the injected parameters, e.g.:
         self.settingsViewModel = parameters[0];
         self.pluginSettings = null;
 
-        self.apiClient = new MaintenanceManagerAPIClient(PLUGIN_ID, BASEURL);
+        self.apiClient = new MaintenanceManagerProPlusAPIClient(PLUGIN_ID, BASEURL);
 
         self.trackingDisplay = null;
         self.trackingDisplayVisible = false;
@@ -132,14 +132,14 @@ $(function() {
      * and a full list of the available options.
      */
     OCTOPRINT_VIEWMODELS.push({
-        construct: MaintenanceManagerViewModel,
+        construct: MaintenanceManagerProPlusViewModel,
         // ViewModels your plugin depends on, e.g. loginStateViewModel, settingsViewModel, ...
         dependencies: [
             "settingsViewModel"
         ],
-        // Elements to bind to, e.g. #settings_plugin_MaintenanceManager, #tab_plugin_MaintenanceManager, ...
+        // Elements to bind to, e.g. #settings_plugin_MaintenanceManagerProPlus, #tab_plugin_MaintenanceManagerProPlus, ...
         elements: [
-            "#settings_plugin_MaintenanceManager"
+            "#settings_plugin_MaintenanceManagerProPlus"
         ]
     });
 });

@@ -6,13 +6,13 @@ import time
 import octoprint.plugin
 from octoprint.events import Events
 
-from octoprint_MaintenanceManager.api.MaintenanceManagerAPI import MaintenanceManagerAPI
-from octoprint_MaintenanceManager.services.MaintenanceService import MaintenanceService
-from octoprint_MaintenanceManager.services.TrackingService import TrackingService
+from octoprint_MaintenanceManagerProPlus.api.MaintenanceManagerProPlusAPI import MaintenanceManagerProPlusAPI
+from octoprint_MaintenanceManagerProPlus.services.MaintenanceService import MaintenanceService
+from octoprint_MaintenanceManagerProPlus.services.TrackingService import TrackingService
 
 
-class MaintenanceManagerPlugin(
-    MaintenanceManagerAPI,
+class MaintenanceManagerProPlusPlugin(
+    MaintenanceManagerProPlusAPI,
     octoprint.plugin.StartupPlugin,
     octoprint.plugin.SettingsPlugin,
     octoprint.plugin.AssetPlugin,
@@ -33,10 +33,10 @@ class MaintenanceManagerPlugin(
 
     def on_after_startup(self):
         self._logger.info(
-            "************************************ MaintenanceManager starting ************************************"
+            "************************************ MaintenanceManagerProPlus starting ************************************"
         )
         self._logger.info(
-            "MaintenanceManager topic: %s" % self._settings.get(["mqttTopic"])
+            "MaintenanceManagerProPlus topic: %s" % self._settings.get(["mqttTopic"])
         )
 
         self.mqtt_helper = self._plugin_manager.get_helpers("mqtt", "mqtt_publish")
@@ -104,7 +104,7 @@ class MaintenanceManagerPlugin(
     def get_settings_defaults(self):
         return dict(
             installed_version=self._plugin_version,
-            mqttTopic="octoPrint/plugin/MaintenanceManager",  
+            mqttTopic="octoPrint/plugin/MaintenanceManagerProPlus",  
         )
 
     ## ~~ TemplatePlugin mixin
@@ -119,9 +119,9 @@ class MaintenanceManagerPlugin(
         # Define your plugin's asset files to automatically include in the
         # core UI here.
         return {
-            "js": ["js/MaintenanceManager.js", "js/MaintenanceManager-APIClient.js"],
-            "css": ["css/MaintenanceManager.css"],
-            "less": ["less/MaintenanceManager.less"],
+            "js": ["js/MaintenanceManagerProPlus.js", "js/MaintenanceManagerProPlus-APIClient.js"],
+            "css": ["css/MaintenanceManagerProPlus.css"],
+            "less": ["less/MaintenanceManagerProPlus.less"],
         }
 
     ##~~ Softwareupdate hook
@@ -130,13 +130,13 @@ class MaintenanceManagerPlugin(
         # Plugin here. See https://docs.octoprint.org/en/master/bundledplugins/softwareupdate.html
         # for details.
         return dict(
-            MaintenanceManager=dict(
-                displayName="MaintenanceManager Plugin",
+            MaintenanceManagerProPlus=dict(
+                displayName="MaintenanceManagerProPlus Plugin",
                 displayVersion=self._plugin_version,
                 # version check: github repository
                 type="github_release",
-                user="OllisGit",
-                repo="OctoPrint-MaintenanceManager",
+                user="Ajimaru",
+                repo="OctoPrint-MaintenanceManagerProPlus",
                 current=self._plugin_version,
                 # Release channels
                 stable_branch=dict(
@@ -155,7 +155,7 @@ class MaintenanceManagerPlugin(
                     ),
                 ],
                 # update method: pip
-                pip="https://github.com/OllisGit/OctoPrint-MaintenanceManager/releases/download/{target_version}/master.zip",
+                pip="https://github.com/Ajimaru/OctoPrint-MaintenanceManagerProPlus/releases/download/{target_version}/master.zip",
             )
         )
 
@@ -166,13 +166,13 @@ class MaintenanceManagerPlugin(
 
     #     new_mqttTopic = self._settings.get(["mqttTopic"])
 
-    #     self._logger.info("MaintenanceManager settings saved.")
+    #     self._logger.info("MaintenanceManagerProPlus settings saved.")
 
 
 # If you want your plugin to be registered within OctoPrint under a different name than what you defined in setup.py
 # ("OctoPrint-PluginSkeleton"), you may define that here. Same goes for the other metadata derived from setup.py that
 # can be overwritten via __plugin_xyz__ control properties. See the documentation for that.
-__plugin_name__ = "MaintenanceManager Plugin"
+__plugin_name__ = "MaintenanceManagerProPlus Plugin"
 
 # Starting with OctoPrint 1.4.0 OctoPrint will also support to run under Python 3 in addition to the deprecated
 # Python 2. New plugins should make sure to run under both versions for now. Uncomment one of the following
@@ -184,7 +184,7 @@ __plugin_pythoncompat__ = ">=3,<4"  # only python 3
 
 def __plugin_load__():
     global __plugin_implementation__
-    __plugin_implementation__ = MaintenanceManagerPlugin()
+    __plugin_implementation__ = MaintenanceManagerProPlusPlugin()
 
     global __plugin_hooks__
     __plugin_hooks__ = {

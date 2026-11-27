@@ -1,6 +1,6 @@
 
 
-function MaintenanceManagerAPIClient(pluginId, baseUrl) {
+function MaintenanceManagerProPlusAPIClient(pluginId, baseUrl) {
 
     this.pluginId = pluginId;
     this.baseUrl = baseUrl;

@@ -1,4 +1,4 @@
 include README.md
-recursive-include octoprint_MaintenanceManager/templates *
-recursive-include octoprint_MaintenanceManager/translations *
-recursive-include octoprint_MaintenanceManager/static *
+recursive-include octoprint_MaintenanceManagerProPlus/templates *
+recursive-include octoprint_MaintenanceManagerProPlus/translations *
+recursive-include octoprint_MaintenanceManagerProPlus/static *

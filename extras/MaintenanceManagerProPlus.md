@@ -1,19 +1,20 @@
 ---
 layout: plugin
 
-id: MaintenanceManager
-title: MaintenanceManager
+id: MaintenanceManagerProPlus
+title: MaintenanceManagerProPlus
 description: Counts all Stepper-Moter movements....
 authors:
+- Ajimaru
 - OllisGit
 license: AGPLv3
 
 # TODO
 date: today's date in format YYYY-MM-DD, e.g. 2015-04-21
 
-homepage: https://github.com/OllisGit/OctoPrint-MaintenanceManager
-source: https://github.com/OllisGit/OctoPrint-MaintenanceManager
-archive: https://github.com/OllisGit/OctoPrint-MaintenanceManager/archive/master.zip
+homepage: https://github.com/Ajimaru/OctoPrint-MaintenanceManagerProPlus
+source: https://github.com/Ajimaru/OctoPrint-MaintenanceManagerProPlus
+archive: https://github.com/Ajimaru/OctoPrint-MaintenanceManagerProPlus/archive/master.zip
 
 # TODO
 # Set this to true if your plugin uses the dependency_links setup parameter to include
@@ -99,4 +100,4 @@ compatibility:
 ---
 
 **TODO**: Longer description of your plugin, configuration examples etc. This part will be visible on the page at
-http://plugins.octoprint.org/plugin/MaintenanceManager/
+http://plugins.octoprint.org/plugin/MaintenanceManagerProPlus/

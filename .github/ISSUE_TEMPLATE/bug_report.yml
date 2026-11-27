@@ -1,0 +1,64 @@
+name: Bug report
+description: Something is not working as expected
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What went wrong, and what did you expect instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Start a print …
+        2. …
+        3. See wrong value / error
+    validations:
+      required: true
+
+  - type: input
+    id: plugin-version
+    attributes:
+      label: Plugin version
+      description: See *Settings* → *Plugin Manager*.
+    validations:
+      required: true
+
+  - type: input
+    id: octoprint-version
+    attributes:
+      label: OctoPrint version
+    validations:
+      required: true
+
+  - type: dropdown
+    id: connection
+    attributes:
+      label: Printer connection
+      description: Axis and extruder travel is read from the G-code OctoPrint sends.
+      options:
+        - Serial / USB
+        - Other connector (Moonraker, Bambu, …)
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log output
+      description: |
+        Relevant part of `octoprint.log`, and the browser console for UI problems.
+        This is inserted as code, so no backticks needed.
+      render: shell
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else?
+      description: Printer model, printing from OctoPrint or the printer's SD card, MQTT setup, screenshots, …

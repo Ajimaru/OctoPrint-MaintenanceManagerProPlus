@@ -1,25 +1,34 @@
-# DISABLED, 09.07.2022
-# ## Documentation could be found here
-# ## https://github.com/actions/stale
-# ##
-# name: 'Stale and close issues'
-# on:
-#   schedule:
-#     # Each day at 1:30am run the action
-#     - cron: '30 1 * * *'
+## Documentation could be found here
+## https://github.com/actions/stale
+##
+name: 'Stale and close issues'
+on:
+  schedule:
+    # Each day at 1:30am run the action
+    - cron: '30 1 * * *'
 
-# jobs:
-#   stale:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/stale@v4
-#         with:
-#           exempt-issue-labels: 'status: analysing,status: inNextRelease,status: inProgress,status: wontfix'
+# Only marks and closes issues; pull requests are left alone.
+permissions:
+  contents: read
+  issues: write
 
-#           days-before-issue-stale: 30
-#           stale-issue-message: 'This issue has been automatically marked for closing, because it has not had activity in 30 days. It will be closed if no further activity occurs in 10 days.'
-#           stale-issue-label:  'status: markedForAutoClose'
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v11
+        with:
+          # Exempt labels only take effect if they exist on the repository.
+          exempt-issue-labels: 'pinned,help wanted,enhancement,feature'
 
-#           days-before-issue-close: 10
-#           close-issue-message: 'This issue was closed, because it has been already marked for 10 days with no activity.'
-#           close-issue-label: 'status: closedByBot'
+          # Keep the day counts in both messages in sync with the settings.
+          days-before-issue-stale: 90
+          stale-issue-message: 'This issue has been automatically marked as stale, because it has not had activity in 90 days. It will be closed if no further activity occurs in 10 days.'
+          stale-issue-label: 'stale'
+
+          days-before-issue-close: 10
+          close-issue-message: 'This issue was closed, because it has been marked as stale for 10 days with no further activity.'
+          close-issue-label: 'stale'
+
+          days-before-pr-stale: -1
+          days-before-pr-close: -1

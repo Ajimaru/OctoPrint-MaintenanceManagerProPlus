@@ -1,0 +1,12 @@
+version: 2
+updates:
+  # The plugin has no pinned Python or npm dependencies, only the actions.
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+    groups:
+      github-actions:
+        patterns:
+          - "*"

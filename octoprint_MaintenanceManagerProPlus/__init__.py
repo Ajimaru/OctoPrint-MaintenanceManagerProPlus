@@ -138,20 +138,16 @@ class MaintenanceManagerProPlusPlugin(
                 user="Ajimaru",
                 repo="OctoPrint-MaintenanceManagerProPlus",
                 current=self._plugin_version,
-                # Release channels
+                # Release channels. All releases are tagged on master; the pre-release
+                # channel needs its own key, a channel equal to the stable one counts as stable.
                 stable_branch=dict(
-                    name="Only Release", branch="master", comittish=["master"]
+                    name="Only Release", branch="master", commitish=["master"]
                 ),
                 prerelease_branches=[
                     dict(
-                        name="Release & Candidate",
-                        branch="pre-release",
-                        comittish=["pre-release", "master"],
-                    ),
-                    dict(
-                        name="Release & Candidate & under Development",
-                        branch="development",
-                        comittish=["development", "pre-release", "master"],
+                        name="Release & Pre-Release",
+                        branch="prerelease",
+                        commitish=["master"],
                     ),
                 ],
                 # update method: pip

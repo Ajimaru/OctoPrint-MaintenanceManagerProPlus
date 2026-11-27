@@ -154,7 +154,9 @@ This project follows the [Contributor Covenant](CODE_OF_CONDUCT.md).
 
 ## License
 
-See [LICENSE](LICENSE).
+AGPLv3 — see [LICENSE](LICENSE).
 
-`utils/odometer.py` is derived from OctoPrint's G-code interpreter, which is licensed under
-the AGPLv3.
+The original repository ships the GPLv3 text in its `LICENSE` file, while its code declares
+AGPLv3 (`setup.py`, JavaScript header). This fork ships the AGPLv3 text to match.
+
+`utils/odometer.py` is derived from OctoPrint's G-code interpreter, which is AGPLv3 as well.
